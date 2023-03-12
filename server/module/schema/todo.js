@@ -16,8 +16,9 @@ const todoSchema = new mongoose.Schema({
 	todoId: Number
 });
 
+;
 // not working
 // autoIncrement.initialize(mongoose.connection);
 // todoSchema.plugin(autoIncrement.plugin, 'Todo');
 
-module.exports = { todoSchema };
+exports.todo = mongoose.model('Todo', todoSchema);
